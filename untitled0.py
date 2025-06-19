@@ -107,4 +107,4 @@ st.write(f"Training Accuracy: {acc:.2f}")
 
 
 
-!pip install streamlit
+pip install streamlit
