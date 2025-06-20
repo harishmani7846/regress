@@ -81,9 +81,3 @@ st.subheader("✅ Model Accuracy")
 train_pred = model.predict(X)
 acc = accuracy_score(y, train_pred)
 st.write(f"Training Accuracy: {acc:.2f}")
-
-
-    pickle.dump(model, f)
-
-from google.colab import files
-files.download("diabetes_model.pkl")
