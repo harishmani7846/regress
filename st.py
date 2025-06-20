@@ -82,24 +82,7 @@ train_pred = model.predict(X)
 acc = accuracy_score(y, train_pred)
 st.write(f"Training Accuracy: {acc:.2f}")
 
-import pickle
 
-# Save the model to a file
-with open('diabetes_model.pkl', 'wb') as f:
-    pickle.dump(model, f)
-
-# Load a saved model
-with open('diabetes_model.pkl', 'rb') as f:
-    loaded_model = pickle.load(f)
-
-# Use the loaded model
-result = loaded_model.predict([[30, 100, 100, 25.0]])
-print("Prediction:", result)
-
-import pickle
-
-# Save the trained model
-with open("diabetes_model.pkl", "wb") as f:
     pickle.dump(model, f)
 
 from google.colab import files
